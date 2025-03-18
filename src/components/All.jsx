@@ -109,6 +109,7 @@ const All = ({ selectedCategory }) => {
       ? items
       : items.filter((item) => item.category === selectedCategory);
 
+      
   return (
     <div
       className="relative min-h-screen bg-cover bg-center flex flex-col items-center p-6 opacity-80"
@@ -222,10 +223,17 @@ const All = ({ selectedCategory }) => {
                         required
                       />
                     </div>
-                    <div className="mt-6 flex justify-end">
+                    <div className="mt-6 flex justify-end space-x-3">
+                      <button
+                        type="button"
+                        onClick={() => setIsModalOpen(false)}
+                        className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-300"
+                      >
+                        Cancel
+                      </button>
                       <button
                         type="submit"
-                        className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 w-full"
+                        className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
                       >
                         Add Item
                       </button>
